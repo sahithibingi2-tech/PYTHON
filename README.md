@@ -56,3 +56,56 @@ The `//` operator performs integer division, so any remainder is discarded. For 
 ## Note
 
 The number of people must not be zero, because division by zero is not possible.
+
+
+# Rock, Paper, Scissors
+
+A beginner Python project that lets you play Rock, Paper, Scissors against a computer. The computer randomly chooses a move, and the program compares it with your choice to decide who wins.
+
+## What you’ll practise
+
+- Getting input with `input()`
+- Choosing a random item with Python’s `random` module
+- Using `if` and `elif` to compare choices
+
+## Requirements
+
+- Python 3
+
+## How to run
+
+1. Save the program in a file named `rock_paper_scissors.py`.
+2. Open a terminal in the folder where you saved it.
+3. Run:
+
+   ```bash
+   python rock_paper_scissors.py
+   ```
+
+   If your computer uses `python3`, run `python3 rock_paper_scissors.py` instead.
+
+4. Type Rock, Paper, or Scissor when prompted.
+
+## Rules
+
+- Rock beats Scissors.
+- Paper beats Rock.
+- Scissors beats Paper.
+- Matching choices make a draw.
+
+## Important: make the choice names consistent
+
+The current code uses different spellings and capitalization in different places. For example, the random choice list contains `"Scissor"`, while one condition checks for `"Scissors"`; it also checks for lowercase `"paper"` and `"scissors"`, even though the prompt and list use capitalized names. Because Python treats these as different strings, some results may be wrong.
+
+Use the same spelling and capitalization everywhere. For example, choose either `"Scissors"` or `"Scissor"` and use it consistently, and make the user input match the same format before comparing it. You can also use `.strip().title()` to accept entries such as `rock`, ` ROCK `, or `Rock` in a consistent form (then make sure your list and conditions use that same form).
+
+## Example
+
+```text
+Enter your choice (Rock, Paper, Scissor): Rock
+user choice is : Rock
+computer choice is : Paper
+You Lose!
+```
+
+Have fun, and try adding input validation so the program asks again when someone enters something other than a valid move.
